@@ -1,40 +1,110 @@
+/* Base styling */
 body {
-  font-family: sans-serif;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e0e;
+  color: #ffffff;
   margin: 0;
   padding: 0;
-  background: #f8f9fa;
-  color: #222;
+  line-height: 1.6;
 }
 
-header, footer {
+a {
+  color: #7ed6df;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header.hero {
   text-align: center;
-  padding: 2em 1em;
-  background: #e0e0e0;
+  padding: 3em 1em;
+  background: url('images/bicarb-running.jpg') center/cover no-repeat;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 0.2em;
+.logo {
+  max-width: 120px;
+  margin-bottom: 1em;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0.2em 0;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-size: 1.2em;
+  opacity: 0.85;
 }
 
 section {
   padding: 2em 1em;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
+}
+
+section.product {
+  background: url('images/bicarb-powder.jpg') center/cover no-repeat;
+  background-color: #1a1a1a;
+  background-blend-mode: multiply;
+  color: #eaeaea;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.6em;
+  border-left: 4px solid #7ed6df;
+  padding-left: 0.5em;
+}
+
+.buy {
+  text-align: center;
+  background: #141414;
 }
 
 .pay-btn {
   display: inline-block;
   background: #00b383;
   color: white;
-  padding: 0.8em 1.2em;
+  padding: 0.9em 1.6em;
   font-weight: bold;
-  border-radius: 6px;
-  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 30px;
   margin-top: 1em;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.pay-btn:hover {
+  background: #00956d;
 }
 
-.pay-btn:hover {
-  background: #008f6b;
+.note {
+  font-size: 0.9em;
+  color: #bbb;
+  margin-top: 0.5em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li::before {
+  content: "› ";
+  color: #7ed6df;
+}
+ul li {
+  margin: 0.5em 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 2em 1em;
+  background: #101010;
+  color: #888;
+  border-top: 1px solid #333;
 }
