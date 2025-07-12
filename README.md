@@ -1,2 +1,3 @@
-# swissbicarb.github.io
-Bicarbonate pills at an affordable rate manufactured in Switzerland
+# Swiss Bicarb – Fuel your PB
+
+Selling bicarbonate capsules online for Swiss middle-distance runners.
