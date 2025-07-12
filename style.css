@@ -1,7 +1,7 @@
 /* Base styling */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url('images/bicarb-powder.jpg') center/cover fixed no-repeat;
+  background: url('images/bicarb-running.jpg') center/cover fixed no-repeat;
   background-color: rgba(0, 0, 0, 0.35); /* ↓ Lower opacity = lighter overlay */
   background-blend-mode: multiply;
   color: #ffffff;
@@ -22,7 +22,7 @@ a:hover {
 header.hero {
   text-align: center;
   padding: 3em 1em;
-  background: url('images/bicarb-running.jpg') center/cover no-repeat;
+  background: url('images/bicarb-powder.jpg') center/cover no-repeat;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
 }
