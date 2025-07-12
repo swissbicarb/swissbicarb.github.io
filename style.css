@@ -57,6 +57,19 @@ section.product {
   padding: 2em 1em;
 }
 
+section.faq {
+  background: rgba(0, 0, 0, 0.65);  /* same as .product */
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+  color: #eaeaea;
+  padding: 2em 1em;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+
 
 section h2 {
   font-size: 1.8em;
