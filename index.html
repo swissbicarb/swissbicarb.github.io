@@ -6,33 +6,74 @@
   <title>Swiss Bicarb – Run Stronger</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .lang-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
+    /* Fixed header container for language toggle and contact button */
+    .fixed-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+      font-family: Arial, sans-serif;
     }
 
-    .lang-toggle button {
+    .fixed-header .contact-btn {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .fixed-header .lang-toggle {
+      /* Right side */
+      display: flex;
+      gap: 10px;
+    }
+
+    .fixed-header .lang-toggle button {
       background: none;
       border: none;
-      margin: 0 5px;
       cursor: pointer;
       font-weight: bold;
+      font-size: 14px;
+      padding: 4px 8px;
+      color: #333;
     }
 
-    .lang-toggle button.active {
+    .fixed-header .lang-toggle button.active {
       text-decoration: underline;
+      color: #0073e6;
+    }
+
+    /* To prevent content from being hidden under fixed header */
+    body {
+      padding-top: 50px; /* slightly larger than fixed header height */
     }
   </style>
 </head>
 <body>
 
-  <header class="hero">
+  <div class="fixed-header">
+    <a href="https://instagram.com/paul__mcintyre" target="_blank" class="contact-btn" rel="noopener noreferrer">Contact</a>
     <div class="lang-toggle">
       <button data-lang="en" class="active">ENG</button>
       <button data-lang="fr">FR</button>
       <button data-lang="de">DE</button>
     </div>
+  </div>
+
+  <header class="hero">
     <img src="images/swiss-bicarb.png" alt="Swiss Bicarb Logo" class="logo" />
     <h1 id="title">Swiss Bicarb</h1>
     <p id="subtitle">Buffered performance for Swiss runners</p>
@@ -49,7 +90,7 @@
 
   <section class="buy">
     <h2 id="buy-title">Buy Now – CHF 28 / Tub (200 capsules)</h2>
-    <a class="pay-btn" href="https://paylink.twint.ch/?id=your-paylink-id" target="_blank">
+    <a class="pay-btn" href="https://paylink.twint.ch/?id=your-paylink-id" target="_blank" rel="noopener noreferrer">
       Pay with TWINT
     </a>
     <p id="note" class="note">Enough for 7–10 race preps • Free Swiss shipping</p>
@@ -69,7 +110,7 @@
   </section>
 
   <footer>
-    <p>Instagram: <a href="https://instagram.com/paul__mcintyre" target="_blank">@paul__mcintyre</a></p>
+    <!-- Instagram link removed as requested -->
   </footer>
 
   <script>
