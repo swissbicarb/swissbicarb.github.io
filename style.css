@@ -22,7 +22,6 @@ a:hover {
 header.hero {
   text-align: center;
   padding: 3em 1em;
-  background: url('images/bicarb-powder.jpg') center/cover no-repeat;
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: overlay;
 }
