@@ -19,27 +19,78 @@ a:hover {
   text-decoration: underline;
 }
 
-header.hero {
-  text-align: center;
-  padding: 3em 1em;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode: overlay;
+  padding: 1em 2em;
+  color: white;
+  flex-wrap: wrap;
 }
 
-.logo {
-  max-width: 120px;
-  margin-bottom: 1em;
+.header-left .logo {
+  max-width: 100px;
 }
 
-header h1 {
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+.header-center h1 {
   font-size: 2.5em;
   margin: 0.2em 0;
   letter-spacing: 1px;
 }
 
-header p {
+.header-center p {
   font-size: 1.2em;
   opacity: 0.85;
+}
+
+.header-right {
+  position: relative;
+}
+
+#menu-toggle {
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#menu-content {
+  position: absolute;
+  top: 2.5em;
+  right: 0;
+  background-color: #333;
+  border-radius: 8px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  z-index: 100;
+}
+
+#menu-content a,
+#menu-content .lang-toggle button {
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-content.hidden {
+  display: none;
+}
+
+.lang-toggle {
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-end;
 }
 
 section {
