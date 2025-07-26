@@ -64,20 +64,29 @@
 </head>
 <body>
 
-  <div class="fixed-header">
-    <a href="https://instagram.com/paul__mcintyre" target="_blank" class="contact-btn" rel="noopener noreferrer">Contact</a>
-    <div class="lang-toggle">
-      <button data-lang="en" class="active">ENG</button>
-      <button data-lang="fr">FR</button>
-      <button data-lang="de">DE</button>
-    </div>
+<div class="header-container">
+  <div class="header-left">
+    <img src="images/swiss-bicarb.png" alt="Swiss Bicarb Logo" class="logo" />
   </div>
 
-  <header class="hero">
-    <img src="images/swiss-bicarb.png" alt="Swiss Bicarb Logo" class="logo" />
+  <div class="header-center">
     <h1 id="title">Swiss Bicarb</h1>
     <p id="subtitle">Buffered performance for Swiss runners</p>
-  </header>
+  </div>
+
+  <div class="header-right">
+    <button id="menu-toggle">☰</button>
+    <div id="menu-content" class="hidden">
+      <a href="https://instagram.com/paul__mcintyre" target="_blank" rel="noopener noreferrer">Contact</a>
+      <div class="lang-toggle">
+        <button data-lang="en" class="active">ENG</button>
+        <button data-lang="fr">FR</button>
+        <button data-lang="de">DE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <section class="product">
     <h2 id="why-title">Why Bicarb?</h2>
