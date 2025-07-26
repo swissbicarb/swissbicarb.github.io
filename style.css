@@ -20,12 +20,17 @@ a:hover {
 }
 
 .header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1em 2em;
+  background-color: #000; /* Fully opaque black */
   color: white;
+  padding: 1em 2em;
   flex-wrap: wrap;
 }
 
