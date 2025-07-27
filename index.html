@@ -60,103 +60,93 @@
     &copy; 2025 Swiss Bicarb
   </footer>
 
-  <!-- Menu Toggle JS -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Toggle menu
       document.getElementById("menu-toggle").addEventListener("click", function () {
         const menu = document.getElementById("menu-content");
         menu.classList.toggle("hidden");
       });
-    });
-  </script>
 
-  <!-- Translation Script -->
-  <script>
-    const translations = {
-      en: {
-        "why-title": "Why Bicarb?",
-        "why-text-1": "During intense racing, lactic acid builds up — sodium bicarbonate buffers that burn. With our high-dose capsules, you get serious support for events from 800m to 10k.",
-        "why-text-2": "Each capsule contains <strong>0.75 g</strong> of pharmaceutical-grade sodium bicarbonate.",
-        "why-text-3": "<strong>Race protocol:</strong> Take <strong>20–30 capsules</strong> (15–22.5 g total) with food & water 90–120 minutes before race start. Start with 20 if new to bicarb.",
-        "why-text-4": "We sell tubs of <strong>200 capsules</strong>, giving you <strong>7–10 full race servings</strong> per tub.",
-        price: "CHF 28 per tub → about CHF 4 per race",
-        "buy-title": "Buy Now – CHF 28 / Tub (200 capsules)",
-        note: "Free Swiss shipping • Secure payment",
-        "faq-title": "How to Use",
-        "faq-list": `
-          <li><strong>When:</strong> 90–120 mins before race or session</li>
-          <li><strong>How many:</strong> Start with 6–10 capsules (~3–5g)</li>
-          <li><strong>Take with:</strong> Water + light food</li>
-          <li><strong>What’s inside:</strong> Sodium bicarbonate in a capsule. Nothing else.</li>
-          <li><strong>How many:</strong> 20–30 capsules per race prep (~15–22.5 g)</li>
-          <li><strong>What's a tub:</strong> 200 capsules = 7–10 full servings</li>
-          <li><strong>Price:</strong> CHF 28 per tub (≈ CHF 4 per race)</li>`
-      },
-      fr: {
-        "why-title": "Pourquoi le bicarbonate ?",
-        "why-text-1": "Lors d’efforts intenses, l’acide lactique s’accumule — le bicarbonate de sodium atténue cette brûlure. Nos capsules à haute dose soutiennent vos courses de 800m à 10km.",
-        "why-text-2": "Chaque capsule contient <strong>0,75 g</strong> de bicarbonate de sodium de qualité pharmaceutique.",
-        "why-text-3": "<strong>Protocole :</strong> Prenez <strong>20–30 capsules</strong> (15–22,5 g au total) avec de la nourriture et de l’eau 90–120 minutes avant la course. Commencez avec 20 si c’est votre première fois.",
-        "why-text-4": "Nous vendons des pots de <strong>200 capsules</strong>, soit <strong>7 à 10 doses complètes</strong> par pot.",
-        price: "CHF 28 le pot → environ CHF 4 par course",
-        "buy-title": "Acheter – CHF 28 / Pot (200 capsules)",
-        note: "Assez pour 7–10 préparations • Livraison suisse gratuite",
-        "faq-title": "Comment l'utiliser",
-        "faq-list": 
-          <li><strong>Quand :</strong> 90–120 min avant une course ou séance</li>
-          <li><strong>Combien :</strong> Commencez par 6–10 capsules (~3–5g)</li>
-          <li><strong>Avec quoi :</strong> Eau + aliment léger</li>
-          <li><strong>Ingrédients :</strong> Bicarbonate de sodium en gélule. Rien d'autre.</li>
-          <li><strong>Combien :</strong> 20–30 capsules par préparation (~15–22,5 g)</li>
-          <li><strong>Un pot :</strong> 200 capsules = 7–10 doses</li>
-          <li><strong>Prix :</strong> CHF 28 par pot (≈ CHF 4 par course)</li>
-      },
-      de: {
-        "why-title": "Warum Bikarbonat?",
-        "why-text-1": "Bei intensiven Rennen entsteht Milchsäure — Natriumbikarbonat puffert diesen Effekt. Unsere hochdosierten Kapseln bieten gezielte Unterstützung für Distanzen von 800m bis 10km.",
-        "why-text-2": "Jede Kapsel enthält <strong>0,75 g</strong> pharmazeutisches Natriumbikarbonat.",
-        "why-text-3": "<strong>Protokoll:</strong> Nehmen Sie <strong>20–30 Kapseln</strong> (15–22,5 g gesamt) mit Nahrung und Wasser 90–120 Minuten vor dem Start ein. Beginnen Sie mit 20, wenn Sie neu sind.",
-        "why-text-4": "Ein Behälter enthält <strong>200 Kapseln</strong> – genug für <strong>7–10 volle Rennvorbereitungen</strong>.",
-        price: "CHF 28 pro Dose → etwa CHF 4 pro Rennen",
-        "buy-title": "Jetzt kaufen – CHF 28 / Dose (200 Kapseln)",
-        note: "Reicht für 7–10 Vorbereitungen • Kostenloser Versand in der Schweiz",
-        "faq-title": "Anwendung",
-        "faq-list": 
-          <li><strong>Wann:</strong> 90–120 Min. vor Rennen oder Training</li>
-          <li><strong>Wieviele:</strong> Beginnen Sie mit 6–10 Kapseln (~3–5g)</li>
-          <li><strong>Mit was:</strong> Wasser + leichte Nahrung</li>
-          <li><strong>Inhalt:</strong> Natriumbikarbonat in einer Kapsel. Sonst nichts.</li>
-          <li><strong>Wieviele:</strong> 20–30 Kapseln pro Vorbereitung (~15–22,5 g)</li>
-          <li><strong>Eine Dose:</strong> 200 Kapseln = 7–10 Portionen</li>
-          <li><strong>Preis:</strong> CHF 28 pro Dose (≈ CHF 4 pro Rennen)</li>
-      }
-    };
+      // Language toggle
+      const translations = {
+        en: {
+          "why-title": "Why Bicarb?",
+          "why-text-1": "During intense racing, lactic acid builds up — sodium bicarbonate buffers that burn. With our high-dose capsules, you get serious support for events from 800m to 10k.",
+          "why-text-2": "Each capsule contains <strong>0.75 g</strong> of pharmaceutical-grade sodium bicarbonate.",
+          "why-text-3": "<strong>Race protocol:</strong> Take <strong>20–30 capsules</strong> (15–22.5 g total) with food & water 90–120 minutes before race start. Start with 20 if new to bicarb.",
+          "why-text-4": "We sell tubs of <strong>200 capsules</strong>, giving you <strong>7–10 full race servings</strong> per tub.",
+          price: "CHF 28 per tub → about CHF 4 per race",
+          "buy-title": "Buy Now – CHF 28 / Tub (200 capsules)",
+          note: "Free Swiss shipping • Secure payment",
+          "faq-title": "How to Use",
+          "faq-list": `
+            <li><strong>When:</strong> 90–120 mins before race or session</li>
+            <li><strong>How many:</strong> Start with 6–10 capsules (~3–5g)</li>
+            <li><strong>Take with:</strong> Water + light food</li>
+            <li><strong>What’s inside:</strong> Sodium bicarbonate in a capsule. Nothing else.</li>
+            <li><strong>How many:</strong> 20–30 capsules per race prep (~15–22.5 g)</li>
+            <li><strong>What's a tub:</strong> 200 capsules = 7–10 full servings</li>
+            <li><strong>Price:</strong> CHF 28 per tub (≈ CHF 4 per race)</li>`
+        },
+        fr: {
+          "why-title": "Pourquoi le bicarbonate ?",
+          "why-text-1": "Lors d’efforts intenses, l’acide lactique s’accumule — le bicarbonate de sodium atténue cette brûlure. Nos capsules à haute dose soutiennent vos courses de 800m à 10km.",
+          "why-text-2": "Chaque capsule contient <strong>0,75 g</strong> de bicarbonate de sodium de qualité pharmaceutique.",
+          "why-text-3": "<strong>Protocole :</strong> Prenez <strong>20–30 capsules</strong> (15–22,5 g au total) avec de la nourriture et de l’eau 90–120 minutes avant la course. Commencez avec 20 si c’est votre première fois.",
+          "why-text-4": "Nous vendons des pots de <strong>200 capsules</strong>, soit <strong>7 à 10 doses complètes</strong> par pot.",
+          price: "CHF 28 le pot → environ CHF 4 par course",
+          "buy-title": "Acheter – CHF 28 / Pot (200 capsules)",
+          note: "Assez pour 7–10 préparations • Livraison suisse gratuite",
+          "faq-title": "Comment l'utiliser",
+          "faq-list": `
+            <li><strong>Quand :</strong> 90–120 min avant une course ou séance</li>
+            <li><strong>Combien :</strong> Commencez par 6–10 capsules (~3–5g)</li>
+            <li><strong>Avec quoi :</strong> Eau + aliment léger</li>
+            <li><strong>Ingrédients :</strong> Bicarbonate de sodium en gélule. Rien d'autre.</li>
+            <li><strong>Combien :</strong> 20–30 capsules par préparation (~15–22,5 g)</li>
+            <li><strong>Un pot :</strong> 200 capsules = 7–10 doses</li>
+            <li><strong>Prix :</strong> CHF 28 par pot (≈ CHF 4 par course)</li>`
+        },
+        de: {
+          "why-title": "Warum Bikarbonat?",
+          "why-text-1": "Bei intensiven Rennen entsteht Milchsäure — Natriumbikarbonat puffert diesen Effekt. Unsere hochdosierten Kapseln bieten gezielte Unterstützung für Distanzen von 800m bis 10km.",
+          "why-text-2": "Jede Kapsel enthält <strong>0,75 g</strong> pharmazeutisches Natriumbikarbonat.",
+          "why-text-3": "<strong>Protokoll:</strong> Nehmen Sie <strong>20–30 Kapseln</strong> (15–22,5 g gesamt) mit Nahrung und Wasser 90–120 Minuten vor dem Start ein. Beginnen Sie mit 20, wenn Sie neu sind.",
+          "why-text-4": "Ein Behälter enthält <strong>200 Kapseln</strong> – genug für <strong>7–10 volle Rennvorbereitungen</strong>.",
+          price: "CHF 28 pro Dose → etwa CHF 4 pro Rennen",
+          "buy-title": "Jetzt kaufen – CHF 28 / Dose (200 Kapseln)",
+          note: "Reicht für 7–10 Vorbereitungen • Kostenloser Versand in der Schweiz",
+          "faq-title": "Anwendung",
+          "faq-list": `
+            <li><strong>Wann:</strong> 90–120 Min. vor Rennen oder Training</li>
+            <li><strong>Wieviele:</strong> Beginnen Sie mit 6–10 Kapseln (~3–5g)</li>
+            <li><strong>Mit was:</strong> Wasser + leichte Nahrung</li>
+            <li><strong>Inhalt:</strong> Natriumbikarbonat in einer Kapsel. Sonst nichts.</li>
+            <li><strong>Wieviele:</strong> 20–30 Kapseln pro Vorbereitung (~15–22,5 g)</li>
+            <li><strong>Eine Dose:</strong> 200 Kapseln = 7–10 Portionen</li>
+            <li><strong>Preis:</strong> CHF 28 pro Dose (≈ CHF 4 pro Rennen)</li>`
+        }
+      };
 
-    document.querySelectorAll('.lang-toggle button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.dataset.lang;
-        document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+      document.querySelectorAll('.lang-toggle button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const lang = btn.dataset.lang;
+          document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
 
-        const t = translations[lang];
-        document.getElementById("why-title").innerHTML = t["why-title"];
-        document.getElementById("why-text-1").innerHTML = t["why-text-1"];
-        document.getElementById("why-text-2").innerHTML = t["why-text-2"];
-        document.getElementById("why-text-3").innerHTML = t["why-text-3"];
-        document.getElementById("why-text-4").innerHTML = t["why-text-4"];
-        document.getElementById("price").innerHTML = t.price;
-        document.getElementById("buy-title").innerHTML = t["buy-title"];
-        document.getElementById("note").innerHTML = t.note;
-        document.getElementById("faq-title").innerHTML = t["faq-title"];
-        document.getElementById("faq-list").innerHTML = t["faq-list"];
-      });
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("menu-toggle").addEventListener("click", function () {
-        const menu = document.getElementById("menu-content");
-        menu.classList.toggle("hidden");
+          const t = translations[lang];
+          document.getElementById("why-title").innerHTML = t["why-title"];
+          document.getElementById("why-text-1").innerHTML = t["why-text-1"];
+          document.getElementById("why-text-2").innerHTML = t["why-text-2"];
+          document.getElementById("why-text-3").innerHTML = t["why-text-3"];
+          document.getElementById("why-text-4").innerHTML = t["why-text-4"];
+          document.getElementById("price").innerHTML = t["price"];
+          document.getElementById("buy-title").innerHTML = t["buy-title"];
+          document.getElementById("note").innerHTML = t["note"];
+          document.getElementById("faq-title").innerHTML = t["faq-title"];
+          document.getElementById("faq-list").innerHTML = t["faq-list"];
+        });
       });
     });
   </script>
