@@ -7,15 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- HEADER START -->
-  <header class="main-header">
+
+  <div class="header-container">
     <div class="header-left">
-      <img src="images/swiss-bicarb.png" alt="Swiss Bicarb Logo" class="logo" />
+      <img src="images/bicarblogo_blackbackground.png" alt="Swiss Bicarb Logo" class="logo" />
     </div>
 
     <div class="header-right">
-      <button class="menu-toggle" aria-label="Menu">&#9776;</button>
-      <div class="menu-content">
+      <button id="menu-toggle">☰</button>
+      <div id="menu-content" class="hidden">
         <a href="https://instagram.com/paul__mcintyre" target="_blank" rel="noopener noreferrer">Contact</a>
         <div class="lang-toggle">
           <button data-lang="en" class="active">ENG</button>
@@ -24,8 +24,8 @@
         </div>
       </div>
     </div>
-  </header>
-  <!-- HEADER END -->
+  </div>
+
   <section class="product">
     <h2 id="why-title">Why Bicarb?</h2>
     <p id="why-text-1">During intense racing, lactic acid builds up — sodium bicarbonate buffers that burn. With our high-dose capsules, you get serious support for events from 800m to 10k.</p>
