@@ -154,5 +154,13 @@
       });
     });
   </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("menu-toggle").addEventListener("click", function () {
+        const menu = document.getElementById("menu-content");
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
 </body>
 </html>
