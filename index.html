@@ -5,83 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Swiss Bicarb – Run Stronger</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Fixed header container for language toggle and contact button */
-    .fixed-header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 40px;
-      background: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-      font-family: Arial, sans-serif;
-    }
-
-    .fixed-header .contact-btn {
-      background-color: #0073e6;
-      color: white;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .fixed-header .lang-toggle {
-      /* Right side */
-      display: flex;
-      gap: 10px;
-    }
-
-    .fixed-header .lang-toggle button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 14px;
-      padding: 4px 8px;
-      color: #333;
-    }
-
-    .fixed-header .lang-toggle button.active {
-      text-decoration: underline;
-      color: #0073e6;
-    }
-
-    /* To prevent content from being hidden under fixed header */
-    body {
-      padding-top: 50px; /* slightly larger than fixed header height */
-    }
-  </style>
 </head>
 <body>
 
-<div class="header-container">
-  <div class="header-left">
-    <img src="images/bicarblogo_blackbackground.png" alt="Swiss Bicarb Logo" class="logo" />
-  </div>
+  <div class="header-container">
+    <div class="header-left">
+      <img src="images/bicarblogo_blackbackground.png" alt="Swiss Bicarb Logo" class="logo" />
+    </div>
 
-  <div class="header-right">
-    <button id="menu-toggle">☰</button>
-    <div id="menu-content" class="hidden">
-      <a href="https://instagram.com/paul__mcintyre" target="_blank" rel="noopener noreferrer">Contact</a>
-      <div class="lang-toggle">
-        <button data-lang="en" class="active">ENG</button>
-        <button data-lang="fr">FR</button>
-        <button data-lang="de">DE</button>
+    <div class="header-right">
+      <button id="menu-toggle">☰</button>
+      <div id="menu-content" class="hidden">
+        <a href="https://instagram.com/paul__mcintyre" target="_blank" rel="noopener noreferrer">Contact</a>
+        <div class="lang-toggle">
+          <button data-lang="en" class="active">ENG</button>
+          <button data-lang="fr">FR</button>
+          <button data-lang="de">DE</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  <header class="hero">
+    <h1 id="title">Swiss Bicarb</h1>
+    <p id="subtitle">Buffered performance for Swiss runners</p>
+  </header>
 
   <section class="product">
     <h2 id="why-title">Why Bicarb?</h2>
@@ -93,11 +41,11 @@
   </section>
 
   <section class="buy">
-    <h2>Buy Now – CHF 28 / Tub (200 capsules)</h2>
+    <h2 id="buy-title">Buy Now – CHF 28 / Tub (200 capsules)</h2>
     <a class="pay-btn" href="https://buy.stripe.com/6oU00l0iAfZJgdr7oi5Rm00" target="_blank" rel="noopener noreferrer">
       Pay with Card (Stripe)
     </a>
-    <p>Free Swiss shipping • Secure payment</p>
+    <p class="note" id="note">Free Swiss shipping • Secure payment</p>
   </section>
 
   <section class="faq">
@@ -114,9 +62,20 @@
   </section>
 
   <footer>
-    <!-- Instagram link removed as requested -->
+    &copy; 2025 Swiss Bicarb
   </footer>
 
+  <!-- Menu Toggle JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("menu-toggle").addEventListener("click", function () {
+        const menu = document.getElementById("menu-content");
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+
+  <!-- Translation Script -->
   <script>
     const translations = {
       en: {
@@ -129,7 +88,7 @@
         "why-text-4": "We sell tubs of <strong>200 capsules</strong>, giving you <strong>7–10 full race servings</strong> per tub.",
         price: "CHF 28 per tub → about CHF 4 per race",
         "buy-title": "Buy Now – CHF 28 / Tub (200 capsules)",
-        note: "Enough for 7–10 race preps • Free Swiss shipping",
+        note: "Free Swiss shipping • Secure payment",
         "faq-title": "How to Use",
         "faq-list": `
           <li><strong>When:</strong> 90–120 mins before race or session</li>
@@ -152,14 +111,14 @@
         "buy-title": "Acheter – CHF 28 / Pot (200 capsules)",
         note: "Assez pour 7–10 préparations • Livraison suisse gratuite",
         "faq-title": "Comment l'utiliser",
-        "faq-list": `
+        "faq-list": 
           <li><strong>Quand :</strong> 90–120 min avant une course ou séance</li>
           <li><strong>Combien :</strong> Commencez par 6–10 capsules (~3–5g)</li>
           <li><strong>Avec quoi :</strong> Eau + aliment léger</li>
           <li><strong>Ingrédients :</strong> Bicarbonate de sodium en gélule. Rien d'autre.</li>
           <li><strong>Combien :</strong> 20–30 capsules par préparation (~15–22,5 g)</li>
           <li><strong>Un pot :</strong> 200 capsules = 7–10 doses</li>
-          <li><strong>Prix :</strong> CHF 28 par pot (≈ CHF 4 par course)</li>`
+          <li><strong>Prix :</strong> CHF 28 par pot (≈ CHF 4 par course)</li>
       },
       de: {
         title: "Swiss Bicarb",
@@ -173,21 +132,20 @@
         "buy-title": "Jetzt kaufen – CHF 28 / Dose (200 Kapseln)",
         note: "Reicht für 7–10 Vorbereitungen • Kostenloser Versand in der Schweiz",
         "faq-title": "Anwendung",
-        "faq-list": `
+        "faq-list": 
           <li><strong>Wann:</strong> 90–120 Min. vor Rennen oder Training</li>
           <li><strong>Wieviele:</strong> Beginnen Sie mit 6–10 Kapseln (~3–5g)</li>
           <li><strong>Mit was:</strong> Wasser + leichte Nahrung</li>
           <li><strong>Inhalt:</strong> Natriumbikarbonat in einer Kapsel. Sonst nichts.</li>
           <li><strong>Wieviele:</strong> 20–30 Kapseln pro Vorbereitung (~15–22,5 g)</li>
           <li><strong>Eine Dose:</strong> 200 Kapseln = 7–10 Portionen</li>
-          <li><strong>Preis:</strong> CHF 28 pro Dose (≈ CHF 4 pro Rennen)</li>`
+          <li><strong>Preis:</strong> CHF 28 pro Dose (≈ CHF 4 pro Rennen)</li>
       }
     };
 
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
       btn.addEventListener('click', () => {
         const lang = btn.dataset.lang;
-
         document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
@@ -207,15 +165,5 @@
       });
     });
   </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("menu-toggle").addEventListener("click", function () {
-        const menu = document.getElementById("menu-content");
-        menu.classList.toggle("hidden");
-      });
-    });
-  </script>
-
-
 </body>
 </html>
